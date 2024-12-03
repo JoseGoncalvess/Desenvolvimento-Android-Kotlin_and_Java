@@ -1,4 +1,4 @@
-package com.jgdev.aprendendokotlindozero
+package com.jgdev.aprendendokotlindozero.assuntos
 
 const val usuario = "Gonçalves" // TEMPO DE COMPILAÇÃO
 
