@@ -10,7 +10,6 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/aluno" />
-            <option value="$PROJECT_DIR$/professor" />
             <option value="$PROJECT_DIR$/recursos" />
           </set>
         </option>
