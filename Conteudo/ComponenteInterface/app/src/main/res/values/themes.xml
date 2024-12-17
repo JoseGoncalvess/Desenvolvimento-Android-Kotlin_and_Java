@@ -3,6 +3,17 @@
     <style name="Base.Theme.ComponenteInterface" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/green</item>
+        <item name="colorPrimaryVariant">@color/green_black</item>
+        <item name="colorSecondary">@color/pink</item>
+        <item name="colorSecondaryVariant">@color/pink_black</item>
+        <item name="colorOnSecondary">@color/yellow</item>
+        <item name="colorOnPrimary">@color/red</item>
+
+
+        <item name="colorBackgroundFloating">@color/yellow</item>
+        <item name="statusBarBackground">@color/pink</item>
+
     </style>
 
     <style name="Theme.ComponenteInterface" parent="Base.Theme.ComponenteInterface" />

@@ -6,4 +6,5 @@
     <string name="descri"> COMUM USAR AS VERIAVEIS EM VALUES PARA DEFINIR OS TEXTOS DO APP E COLORS</string>
     <string name="description_assets_vector">USo de Assets e Icones</string>
     <string name="bootom_empyt_memory">Limpar Memory</string>
+    <string name="themer_colors">themer Color</string>
 </resources>

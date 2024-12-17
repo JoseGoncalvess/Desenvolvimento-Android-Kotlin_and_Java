@@ -1,6 +1,18 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
+    <!-- Essa DEFINÇÃO È ULTILIZADA QUANDO PRECISA-SE IMPLEMNETAR O MODO DARCK DOS APRELHOS -->
+    <!-- MEMSA COFIGURAÇÂO DO TEMA PADÃO -->
     <style name="Base.Theme.ComponenteInterface" parent="Theme.Material3.DayNight.NoActionBar">
+
+        <item name="colorPrimary">#673AB7</item>
+        <item name="colorPrimaryVariant">#3F1F78</item>
+        <item name="colorOnPrimary">@color/yellow</item>
+
+
+        <item name="colorSecondary">#FF5A25</item>
+        <item name="colorSecondaryVariant">#A43F20</item>
+        <item name="colorOnSecondary">@color/white</item>
+
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
     </style>
