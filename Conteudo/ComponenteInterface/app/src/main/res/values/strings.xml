@@ -4,4 +4,6 @@
     <!-- TESTOS CUSTOMIZAVEIS< SEGUINDO BOAS PRATICAS-->
     <string name="Buttom_jogar">Jogar</string>
     <string name="descri"> COMUM USAR AS VERIAVEIS EM VALUES PARA DEFINIR OS TEXTOS DO APP E COLORS</string>
+    <string name="description_assets_vector">USo de Assets e Icones</string>
+    <string name="bootom_empyt_memory">Limpar Memory</string>
 </resources>
