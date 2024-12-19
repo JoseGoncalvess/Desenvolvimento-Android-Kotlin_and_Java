@@ -16,5 +16,12 @@
 
     </style>
 
+    <!-- PSOSO CRIAR DESIGNES PARA OS MEUS CMPONENTES-->
+    
+    <style name="BoxTExt" parent="ShapeAppearanceOverlay.Material3.Button">
+        <item name="textAppearanceBody1"> @color/red</item>
+        
+    </style>
+
     <style name="Theme.ComponenteInterface" parent="Base.Theme.ComponenteInterface" />
 </resources>
