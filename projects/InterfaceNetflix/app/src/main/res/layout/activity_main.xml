@@ -13,7 +13,18 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/BackgroudColor"
-        tools:context=".MainActivity">
+        tools:context=".MainActivity"
+        tools:layout_editor_absoluteX="-203dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/notification"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+            app:layout_constraintTop_toTopOf="@+id/imageView3"
+            tools:layout_editor_absoluteX="285dp" />
 
         <ImageView
             android:id="@+id/imageView2"
@@ -21,27 +32,40 @@
             android:layout_height="29dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+            app:layout_constraintTop_toTopOf="@+id/guideline3"
             app:srcCompat="@drawable/LOGO_FULL" />
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="72dp"
+            android:layout_height="19dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:drawableEnd="@drawable/drop_buttom"
+            android:drawablePadding="0dp"
+            android:padding="0dp"
             android:text="Navegar"
             android:textColor="@color/ColorText"
-            tools:layout_editor_absoluteX="130dp"
-            tools:layout_editor_absoluteY="26dp" />
+            android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+            app:layout_constraintTop_toTopOf="@+id/imageView2"
+            app:layout_constraintVertical_bias="0.0"
+            tools:layout_editor_absoluteX="114dp" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/Title_Cap"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
             android:text="SENNA"
             android:textColor="@color/ColorText"
-            tools:layout_editor_absoluteX="44dp"
-            tools:layout_editor_absoluteY="64dp" />
+            android:textSize="32dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
         <TextView
             android:id="@+id/textView3"
@@ -62,15 +86,6 @@
             tools:layout_editor_absoluteY="355dp" />
 
         <TextView
-            android:id="@+id/textView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Top 4 em séries hoje"
-            android:textColor="@color/ColorText"
-            tools:layout_editor_absoluteX="114dp"
-            tools:layout_editor_absoluteY="83dp" />
-
-        <TextView
             android:id="@+id/textView3"
             android:layout_width="124dp"
             android:layout_height="21dp"
@@ -78,60 +93,88 @@
             android:textColor="@color/ColorText"
             tools:layout_editor_absoluteX="218dp"
             tools:layout_editor_absoluteY="301dp" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="34dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineRigth"
+            app:layout_constraintTop_toTopOf="@+id/guideline3"
+            app:srcCompat="@drawable/perfil" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="16dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineRigth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="395dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="20dp" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Top 4 em séries hoje"
+            android:textColor="@color/ColorText"
+            android:textSize="8dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+            app:layout_constraintTop_toTopOf="@+id/imageView4"
+            tools:layout_editor_absoluteX="66dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="284dp" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="124dp"
+            android:layout_height="21dp"
+            android:text="Séries dramáticas"
+            android:textColor="@color/ColorText"
+            tools:layout_editor_absoluteX="15dp"
+            tools:layout_editor_absoluteY="309dp" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="202dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:text="Apaixonado por carros desde a infância, Ayrton Senna se tornou uma lenda do esporte, até que uma tragédia mudou a Fórmula 1 para sempre."
+            android:textColor="@color/ColorText"
+            android:textSize="8dp"
+            app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="22dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+            app:layout_constraintTop_toBottomOf="@+id/Title_Cap"
+            app:srcCompat="@drawable/top10" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="74dp"
-        android:layout_height="29dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/LOGO_FULL" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Navegar"
-        android:textColor="@color/ColorText"
-        tools:layout_editor_absoluteX="130dp"
-        tools:layout_editor_absoluteY="26dp" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="SENNA"
-        android:textColor="@color/ColorText"
-        tools:layout_editor_absoluteX="44dp"
-        tools:layout_editor_absoluteY="64dp" />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="124dp"
-        android:layout_height="21dp"
-        android:text="Séries dramáticas"
-        android:textColor="@color/ColorText"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="236dp" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="355dp"
-        android:layout_height="59dp"
-        android:text="Apaixonado por carros desde a infância, Ayrton Senna se tornou uma lenda do esporte, até que uma tragédia mudou a Fórmula 1 para sempre."
-        android:textColor="@color/ColorText"
-        tools:layout_editor_absoluteX="47dp"
-        tools:layout_editor_absoluteY="137dp" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Top 4 em séries hoje"
-        android:textColor="@color/ColorText"
-        tools:layout_editor_absoluteX="114dp"
-        tools:layout_editor_absoluteY="83dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
