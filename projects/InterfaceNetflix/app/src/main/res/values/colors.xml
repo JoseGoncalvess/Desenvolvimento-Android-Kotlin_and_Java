@@ -2,4 +2,9 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+<!-- PERSONAL COLORS NETFLIX    -->
+    <color name="primary">#E50914</color>
+    <color name="Secundary">#B0060F</color>
+    <color name="BackgroudColor">#101010</color>
+    <color name="ColorText">#FFFFFF</color>
 </resources>
