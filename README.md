@@ -16,3 +16,10 @@
 <p><strong>Estrutor :</strong> <a href="https://www.udemy.com/user/jamiltondamasceno/">Jamilton Damasceno</a> </p>
 </div>
 <hr>
+
+<h1>Modulos</h1>
+
+- [x] **Seção 4: Aprenda a Linguagem de Programação Java do Zero - Semana 02**
+- [x] **Seção 5: Aprenda orientação a objetos com Java - Semana 03**
+- [x] **Seção 6: Componentes de interface - Semana 04**
+- [ ] **Seção 7: Aprenda Kotlin do zero - Semana 05**
