@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">AlcooOuGasolina</string>
+    <string name="btn_action">Calcular</string>
+    <string name="text_result">Resultado</string>
+
+    <string name="hint_gasolina">Preço do Gasolina ex: 7.30</string>
+    <string name="hint_alcoo">Preço da Álcoo ex: 4.56</string>
+</resources>
