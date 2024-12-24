@@ -8,6 +8,9 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.jgdev.activitiesandfragments.models.Anime
+import com.jgdev.activitiesandfragments.models.User
+
 
 class MainActivity : AppCompatActivity() {
     lateinit var btnAbrir : Button;
@@ -26,6 +29,13 @@ class MainActivity : AppCompatActivity() {
         initVar()
         btnAbrir.setOnClickListener {
             val intent = Intent(this, DetailsActivity2::class.java)
+
+            var userObject = User("Gonçlaves",25)
+            var animeObject = Anime("Naruto",500)
+
+            intent.putExtra("usuario",userObject)
+            intent.putExtra("anime",animeObject)
+
             startActivity(intent)
         }
 
