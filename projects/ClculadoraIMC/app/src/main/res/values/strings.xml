@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ClculadoraIMC</string>
+    <string name="InputPesoText">Digite seu Peso ex:98.8</string>
+    <string name="InputTextAltura">Digite sua Altura ex:1.70</string>
+    <string name="BtnCalcular">Calcular</string>
+    <string name="DicaText">Ultilize o \" . \" para subistituir  avírgula.</string>
+    <string name="Diagnostico">Diagnóstico</string>
+</resources>
