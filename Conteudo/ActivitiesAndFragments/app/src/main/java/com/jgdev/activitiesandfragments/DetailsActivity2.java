@@ -37,13 +37,13 @@ public class DetailsActivity2 extends AppCompatActivity {
 
         if(buble != null){
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU){
-                User user =  buble.getSerializable("usuario", User.class); // TODO MODO ANTIGO
+                User user =  buble.getParcelable("usuario", User.class); // TODO MODO ANTIGO
                 Anime anime =  buble.getParcelable("anime", Anime.class); // VERSÃO NOVO RECOMENDANDA
                 textResult.setText("Usuario: "+user.getNome()+" Idade: "+user.getAge());
                 textResult2.setText("Usuario: "+anime.getNome()+" Nº Ep: "+anime.getQtdEp());
 
             }else {
-                User user = (User) buble.getSerializable("usuario"); // TODO MODO ANTIGO
+                User user = (User) buble.getParcelable("usuario"); // TODO MODO ANTIGO
                 Anime anime =  buble.getParcelable("anime"); // VERSÃO NOVO RECOMENDANDA
                 textResult.setText("Usuario: "+user.getNome()+" Idade: "+user.getAge());
                 textResult2.setText("Usuario: "+anime.getNome()+" Nº Ep: "+anime.getQtdEp());

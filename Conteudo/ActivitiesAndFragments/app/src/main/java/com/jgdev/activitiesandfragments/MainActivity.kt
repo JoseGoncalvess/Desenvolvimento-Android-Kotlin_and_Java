@@ -28,20 +28,32 @@ class MainActivity : AppCompatActivity() {
         }
         initVar()
         btnAbrir.setOnClickListener {
-            val intent = Intent(this, DetailsActivity2::class.java)
 
-            var userObject = User("Gonçlaves",25)
+
+            val intent = Intent(this, DetailsActivity::class.java)
+
+            var userObject = User("Jackie Chan",70)
             var animeObject = Anime("Naruto",500)
 
             intent.putExtra("usuario",userObject)
             intent.putExtra("anime",animeObject)
 
+            intent.putExtra("userName","Jackie Chan")
+            intent.putExtra("userIdade",70)
+
+
             startActivity(intent)
         }
 
 
-
     }
+
+    fun initVar(){
+        btnAbrir = findViewById(R.id.btn_abrir)
+    }
+
+
+
 
     override fun onStart() {
         super.onStart()
@@ -77,7 +89,4 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    fun initVar(){
-        btnAbrir = findViewById(R.id.btn_abrir)
-    }
 }
