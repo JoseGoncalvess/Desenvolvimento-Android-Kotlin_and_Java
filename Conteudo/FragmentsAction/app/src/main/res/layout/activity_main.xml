@@ -23,7 +23,7 @@
         app:layout_constraintGuide_percent="0.07" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_converssas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Conversas"
@@ -33,7 +33,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btn_status"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Status"
@@ -43,8 +43,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentContainerView"
-        android:name="com.jgdev.fragmentsaction.fragments.ConverssasFragmet"
+        android:id="@+id/fragment_container"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -54,5 +53,27 @@
         tools:layout="@layout/fragment_converssas"
 
         />
+
+    <Button
+        android:id="@+id/btn_reset"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:drawableStart="@drawable/ic_launcher_foreground"
+        android:drawableRight="@drawable/ic_launcher_foreground"
+        android:text="Home"
+        app:iconSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline3" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

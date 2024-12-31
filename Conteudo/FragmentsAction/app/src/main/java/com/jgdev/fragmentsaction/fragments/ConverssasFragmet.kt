@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.jgdev.fragmentsaction.R
 
-class ConverssasFragmet : Fragment() {
+class ConverssasFragmet : Fragment(R.layout.fragment_converssas) {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
