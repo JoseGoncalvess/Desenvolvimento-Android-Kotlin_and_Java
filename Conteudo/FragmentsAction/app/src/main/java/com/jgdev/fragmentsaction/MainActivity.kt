@@ -4,11 +4,10 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.os.bundleOf
+import androidx.fragment.app.*
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import androidx.fragment.app.add
-import androidx.fragment.app.commit
-import androidx.fragment.app.replace
 import com.jgdev.fragmentsaction.fragments.ConverssasFragmet
 import com.jgdev.fragmentsaction.fragments.StatusFragment
 
@@ -16,6 +15,8 @@ class MainActivity : AppCompatActivity() {
     lateinit var btnConverssa: Button;
     lateinit var btnStatus: Button;
     lateinit var btnHome: Button;
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -26,8 +27,12 @@ class MainActivity : AppCompatActivity() {
             insets
         }
         init()
+
         val converssasFragmet = ConverssasFragmet()
-        val statusFragment =StatusFragment()
+        val statusFragment = StatusFragment()
+
+
+// METODO ANTIGO
         btnConverssa.setOnClickListener {
        supportFragmentManager
            .beginTransaction()
@@ -35,11 +40,25 @@ class MainActivity : AppCompatActivity() {
            .commit()
         }
 
+
+        // METODO COM O KOTLIN KTX EXTENSION
         btnStatus.setOnClickListener {
-            supportFragmentManager
-                .beginTransaction()
-                .replace(R.id.fragment_container,statusFragment)
-                .commit()
+            val bundle = bundleOf(
+                "categoria" to "Fragment Ativo"
+            )
+
+
+//            supportFragmentManager
+//                .beginTransaction()
+//                .replace(R.id.fragment_container,statusFragment)
+//                .commit()
+
+
+            // FORMA COM ANDROID KTX
+            supportFragmentManager.commit{
+                replace<StatusFragment>(R.id.fragment_container, args = bundle)
+
+            }
         }
 
         btnHome.setOnClickListener {
