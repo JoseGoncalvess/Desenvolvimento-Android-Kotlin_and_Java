@@ -6,10 +6,17 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.jgdev.fragmentsaction.R
 
 class ConverssasFragmet : Fragment(R.layout.fragment_converssas) {
+    lateinit var btnExecultar : Button
+    lateinit var inputText : EditText
+    lateinit var resultText : TextView
+
     override fun onAttach(context: Context) {
         super.onAttach(context)
         Log.i("LIFE_CYCLE","INICIO DA  -> onAttach")
@@ -27,9 +34,21 @@ class ConverssasFragmet : Fragment(R.layout.fragment_converssas) {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         Log.i("LIFE_CYCLE","INICIO DA  -> onCreateView")
         // CRIA A VISUALIZAÇÃO D FRAGMENTO
-        return inflater.inflate(R.layout.fragment_converssas, container, false)
+        val view = inflater.inflate(R.layout.fragment_converssas, container, false)
+        btnExecultar = view.findViewById(R.id.btn_exibir);
+        resultText = view.findViewById(R.id.textresult);
+        inputText = view.findViewById(R.id.editext);
+
+
+
+        btnExecultar.setOnClickListener {
+            val nome = inputText.text.toString()
+            resultText.setText(nome)
+        }
+        return view
 
     }
 
@@ -79,6 +98,10 @@ class ConverssasFragmet : Fragment(R.layout.fragment_converssas) {
         super.onDetach()
         // DESACOPLA O FRAGMENTE DA TELA
 
+
+    }
+
+    fun init(){
 
     }
 }
