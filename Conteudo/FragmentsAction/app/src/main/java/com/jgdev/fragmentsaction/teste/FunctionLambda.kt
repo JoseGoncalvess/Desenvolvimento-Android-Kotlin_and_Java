@@ -44,7 +44,7 @@ fun main() {
 
     example.functionMetod { args ->
 
-        println("OLÀ, SOU UMA FUNCTIO  E FUI APSSADA COMO PARAMETRO -> $args")
+        println("OLÀ, SOU UMA FUNCTIO  E FUI APSSADA COMO PARAMETRO ->  $args")
     }
 
 
