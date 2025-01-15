@@ -23,3 +23,4 @@
 - [x] **Seção 6: Componentes de interface - Semana 04**
 - [x] **Seção 7: Aprenda Kotlin do zero - Semana 05**
 - [x] **Seção 8: Navegação - Activities e Fragments - Semana 06**
+- [X] **Seção 9: Coleções - Semana 07**
