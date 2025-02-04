@@ -21,7 +21,6 @@ class MensagemAdapter(
 
          val  textNome : TextView = itemView.findViewById(R.id.text_nome)
          val  textsubTitle : TextView = itemView.findViewById(R.id.text_subtitle)
-         val  checkBox : CheckBox = itemView.findViewById(R.id.checked_speak)
 
     }
 
@@ -45,7 +44,5 @@ class MensagemAdapter(
         val mensagem = list[position]
         holder.textNome.text = mensagem.nome
         holder.textsubTitle.text = mensagem.ultima
-        holder.checkBox.isActivated = mensagem.status
-
     }
 }
