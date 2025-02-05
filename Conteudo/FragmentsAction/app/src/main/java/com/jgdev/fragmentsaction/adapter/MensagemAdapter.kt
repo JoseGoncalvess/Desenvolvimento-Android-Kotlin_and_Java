@@ -19,16 +19,27 @@ class MensagemAdapter(
         val itemView : View
     ): ViewHolder(itemView) {
 
-         val  textNome : TextView = itemView.findViewById(R.id.text_nome)
-         val  textsubTitle : TextView = itemView.findViewById(R.id.text_subtitle)
+//         val  textNome : TextView = itemView.findViewById(R.id.text_nome)
+//         val  textsubTitle : TextView = itemView.findViewById(R.id.text_subtitle)
+
+         val  textNome : TextView = itemView.findViewById(R.id.text_card_nome)
+         val  textsubTitle : TextView = itemView.findViewById(R.id.text_card_ultima)
 
     }
 
     // CRIAA  VISUALIZAÇÂO
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MensagemViewHolder {
        val inflateViewHolder = LayoutInflater.from(parent.context) // crio o inflate do zero
-        val itemView = inflateViewHolder.inflate(
-            R.layout.item_list,
+
+        // item view
+//        val itemView = inflateViewHolder.inflate(
+//            R.layout.item_list,
+//            parent,
+//            false
+//        )
+
+                val itemView = inflateViewHolder.inflate(
+            R.layout.item_card_view,
             parent,
             false
         )

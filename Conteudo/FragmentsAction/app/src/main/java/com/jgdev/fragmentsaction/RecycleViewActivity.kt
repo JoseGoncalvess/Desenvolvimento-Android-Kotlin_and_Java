@@ -39,16 +39,16 @@ class RecycleViewActivity : AppCompatActivity() {
 //        rv_list.layoutManager = LinearLayoutManager(this)
 
 //        Linear Layout
-//        rv_list.layoutManager = LinearLayoutManager(this, RecyclerView.HORIZONTAL, false)
+        rv_list.layoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL, false)
 
         // GRID LAYOUT 
 //        rv_list.layoutManager = GridLayoutManager(this, 3, RecyclerView.HORIZONTAL, false)
 
-        // Starategy
-        rv_list.layoutManager = StaggeredGridLayoutManager(
-            2,
-            RecyclerView.HORIZONTAL
-        )
+//        // Starategy
+//        rv_list.layoutManager = StaggeredGridLayoutManager(
+//            2,
+//            RecyclerView.HORIZONTAL
+//        )
 
 
     }
