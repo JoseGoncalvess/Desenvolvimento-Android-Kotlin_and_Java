@@ -9,11 +9,24 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.jgdev.fragmentsaction.R
+import com.jgdev.fragmentsaction.teste.mutableList
 
 class MensagemAdapter(
-    private  val list : List<Mensagem>
+
+    private val  ontap: (String)-> Unit
 
 ) : Adapter<MensagemAdapter.MensagemViewHolder>() {
+    private  var multableMensagem  = mutableListOf<Mensagem>()
+
+    fun atualizarList( list : MutableList<Mensagem> ){
+//        multableMensagem.addAll(list)
+
+        multableMensagem = list
+        notifyDataSetChanged() // avisa pro adaptarque a a lista mudou
+    }
+
+
+
 
     inner class MensagemViewHolder(
         val itemView : View
@@ -24,6 +37,8 @@ class MensagemAdapter(
 
          val  textNome : TextView = itemView.findViewById(R.id.text_card_nome)
          val  textsubTitle : TextView = itemView.findViewById(R.id.text_card_ultima)
+
+
 
     }
 
@@ -48,12 +63,14 @@ class MensagemAdapter(
     }
         // RETORNA O TAMANHO DA LISTA
         override fun getItemCount(): Int {
-            return  list.size
+            return  multableMensagem.size
         }
  // AO VINCULAR O VIEWHOLDER
     override fun onBindViewHolder(holder: MensagemViewHolder, position: Int) {
-        val mensagem = list[position]
+        val mensagem = multableMensagem[position]
         holder.textNome.text = mensagem.nome
         holder.textsubTitle.text = mensagem.ultima
+
+        ontap(mensagem.nome)
     }
 }

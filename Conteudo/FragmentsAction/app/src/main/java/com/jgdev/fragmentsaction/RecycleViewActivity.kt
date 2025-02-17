@@ -1,10 +1,12 @@
 package com.jgdev.fragmentsaction
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -15,6 +17,13 @@ import com.jgdev.fragmentsaction.adapter.MensagemAdapter
 
 class RecycleViewActivity : AppCompatActivity() {
     lateinit var  rv_list : RecyclerView;
+    lateinit var  mensagemAdapter : MensagemAdapter;
+
+
+    override fun onStart() {
+        super.onStart()
+    }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,7 +34,7 @@ class RecycleViewActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        val persons = listOf<Mensagem>(
+        val persons = mutableListOf<Mensagem>(
 
             Mensagem("Gonçlaves","Bora lozin?",true),
             Mensagem("Anny","Ja ta vindo amor?",false),
@@ -35,9 +44,24 @@ class RecycleViewActivity : AppCompatActivity() {
         )
         rv_list = findViewById(id.rv_view)
 
-        rv_list.adapter = MensagemAdapter(persons)
+
+        mensagemAdapter = MensagemAdapter(){ mensage ->
+            Toast.makeText(this,"Olá $mensage", Toast.LENGTH_LONG)
+        }
+
+
+        rv_list.adapter = mensagemAdapter
+        mensagemAdapter.atualizarList(persons)
+
 //        rv_list.layoutManager = LinearLayoutManager(this)
 
+        // DECORATION
+        rv_list.addItemDecoration(
+            DividerItemDecoration(
+                this,RecyclerView.VERTICAL
+            )
+
+        )
 //        Linear Layout
         rv_list.layoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL, false)
 
