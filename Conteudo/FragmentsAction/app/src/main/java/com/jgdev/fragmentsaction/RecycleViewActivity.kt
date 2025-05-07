@@ -1,6 +1,7 @@
 package com.jgdev.fragmentsaction
 
 import android.os.Bundle
+import android.widget.Button
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -18,11 +19,25 @@ import com.jgdev.fragmentsaction.adapter.MensagemAdapter
 class RecycleViewActivity : AppCompatActivity() {
     lateinit var  rv_list : RecyclerView;
     lateinit var  mensagemAdapter : MensagemAdapter;
+    lateinit var  btnInsert : Button;
 
 
     override fun onStart() {
         super.onStart()
+        val persons = mutableListOf<Mensagem>(
+
+            Mensagem("Gonçlaves","Bora lozin?",true),
+            Mensagem("Anny","Ja ta vindo amor?",false),
+//            Mensagem("Gui","Iae, Irmão!",false),
+//            Mensagem("Maria","Bora Volei hoje?",true),
+//            Mensagem("Yanne","Saudades, amigo...",false),
+        )
+        mensagemAdapter.atualizarList(persons)
     }
+
+
+
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,16 +47,13 @@ class RecycleViewActivity : AppCompatActivity() {
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
-        val persons = mutableListOf<Mensagem>(
+            insets;
 
-            Mensagem("Gonçlaves","Bora lozin?",true),
-            Mensagem("Anny","Ja ta vindo amor?",false),
-            Mensagem("Gui","Iae, Irmão!",false),
-            Mensagem("Maria","Bora Volei hoje?",true),
-            Mensagem("Yanne","Saudades, amigo...",false),
-        )
+
+
+        }
+        btnInsert = findViewById<Button>(R.id.button3)
+
         rv_list = findViewById(id.rv_view)
 
 
@@ -51,7 +63,28 @@ class RecycleViewActivity : AppCompatActivity() {
 
 
         rv_list.adapter = mensagemAdapter
-        mensagemAdapter.atualizarList(persons)
+        // ATUALIZAVA LISTA POR INTEIRO
+//        val persons = mutableListOf<Mensagem>(
+//
+//            Mensagem("Gonçlaves","Bora lozin?",true),
+//            Mensagem("Anny","Ja ta vindo amor?",false),
+//            Mensagem("Gui","Iae, Irmão!",false),
+//            Mensagem("Maria","Bora Volei hoje?",true),
+//            Mensagem("Yanne","Saudades, amigo...",false),
+//        )
+//
+//
+//
+//        mensagemAdapter.atualizarList(persons)
+
+
+
+
+        btnInsert.setOnClickListener {
+            mensagemAdapter.execultUpdate(Mensagem("Anny","Bora Comer?",true))
+        }
+
+
 
 //        rv_list.layoutManager = LinearLayoutManager(this)
 

@@ -9,7 +9,6 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.jgdev.fragmentsaction.R
-import com.jgdev.fragmentsaction.teste.mutableList
 
 class MensagemAdapter(
 
@@ -23,6 +22,12 @@ class MensagemAdapter(
 
         multableMensagem = list
         notifyDataSetChanged() // avisa pro adaptarque a a lista mudou
+    }
+
+    fun execultUpdate(msg:Mensagem){
+        multableMensagem.add(msg)
+        notifyItemInserted(multableMensagem.size) // NOTIFICA O ITEM AN POSIÇÂO
+        notifyItemRangeInserted(multableMensagem.size, 3) // NOTIFICA ATUALIZAÇÂO  A PARTIRD UM RANGE
     }
 
 
