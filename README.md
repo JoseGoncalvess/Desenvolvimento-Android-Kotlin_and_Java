@@ -10,7 +10,7 @@
 <hr>
 
 <div align = "center" >
-<a href="https://www.udemy.com/course/desenvolvimento-android-completo/"><img src = "./assets/Baner-Curso.jpg" width="300" height ="200"></a>
+<a href="https://www.udemy.com/course/desenvolvimento-android-completo/"><img src = "assets/Baner-Curso.jpg" width="300" height ="200"></a>
 <h2>Desenvolvimento Android Completo - Kotlin & Java</h2>
 <p><strong>Estrutor :</strong> <a href="https://www.udemy.com/user/jamiltondamasceno/">Jamilton Damasceno</a> </p>
 </div>
@@ -24,3 +24,4 @@
 - [x] **Seção 7: Aprenda Kotlin do zero - Semana 05**
 - [x] **Seção 8: Navegação - Activities e Fragments - Semana 06**
 - [X] **Seção 9: Coleções - Semana 07**
+- [X] **Seção 10: Componentes de listagem - Semana 08**
