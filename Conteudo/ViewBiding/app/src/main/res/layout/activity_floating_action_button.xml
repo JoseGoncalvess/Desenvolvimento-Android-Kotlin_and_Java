@@ -14,10 +14,65 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         android:clickable="true"
-        app:tint="#FFFFFF"
         app:backgroundTint="#E91E63"
+        app:fabSize="auto"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:rippleColor="#E63D75"
-        app:srcCompat="@drawable/ic_android_black_24dp" />
+        app:srcCompat="@drawable/ic_android_black_24dp"
+        app:tint="#FFFFFF" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabCamera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="4dp"
+        android:clickable="true"
+        app:backgroundTint="#FFC107"
+        app:fabSize="mini"
+        app:layout_constraintBottom_toTopOf="@+id/fabAlert"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_add_photo_24"
+        app:tint="#FDFDFD" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAlert"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:clickable="true"
+        app:backgroundTint="#FFC107"
+        app:fabSize="mini"
+        app:layout_constraintBottom_toTopOf="@+id/FabButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_add_alert_24"
+        app:tint="#FDFDFD" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/groupMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="fabCamera,fabAlert" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fabExtendBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:clickable="true"
+        android:text="Salvar"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold|italic"
+        app:backgroundTint="#F44336"
+        app:cornerRadius="@dimen/material_emphasis_disabled"
+        app:icon="@drawable/ic_save_24"
+        app:iconPadding="12dp"
+        app:iconTint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_save_24" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
