@@ -26,17 +26,30 @@ ActivityFormularyBinding.inflate(layoutInflater)
 //            btnEnviar.setOnClickListener {
 //                atualizar()
 //            }
+awitchToggle()
 
-            chekedTerm.setOnCheckedChangeListener { compoundButton, isCheked ->
-                val resultado = if (isCheked) "SIm" else "Não"
-                biding.textResult.text = "O CHEKEDE ESTÀ $resultado"
-            }
         }
+    }
+
+    private fun awitchToggle() {
+        val switchMarcado = biding.switchNotification.isChecked
+        val toggleMarcado = biding.toggleCont.isChecked
+
+        val text = "Switch: $switchMarcado | Tooggle: $toggleMarcado"
+
+        biding.textResult.text = text
     }
 
     private fun atualizar() {
       val chek =   biding.chekedTerm.isChecked
         val resultado = if (chek) "SIm" else "Não"
         biding.textResult.text = "O CHEKEDE ESTÀ $resultado"
+    }
+    private fun cheked(){
+
+        biding.chekedTerm.setOnCheckedChangeListener { compoundButton, isCheked ->
+            val resultado = if (isCheked) "SIm" else "Não"
+            biding.textResult.text = "O CHEKEDE ESTÀ $resultado"
+        }
     }
 }
