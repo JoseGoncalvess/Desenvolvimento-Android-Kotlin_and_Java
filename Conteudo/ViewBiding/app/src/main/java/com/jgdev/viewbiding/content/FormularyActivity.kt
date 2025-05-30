@@ -38,9 +38,15 @@ class FormularyActivity : AppCompatActivity() {
     }
 
     private fun showSnackBar(view: View) {
+<<<<<<< HEAD
         val snakBar = Snackbar.make(
             view,"Rustinn!!!",Snackbar.LENGTH_LONG
         )
+=======
+             val snakBar = Snackbar.make(
+                view,"Rustinn!!!",Snackbar.LENGTH_LONG
+                )
+>>>>>>> b809e5e8f3c235ee6d2ae5dda120877b0571cc12
         snakBar.setAction("OPA",{
             Toast.makeText(this,"Feito",Toast.LENGTH_LONG).show()
         })
