@@ -1,11 +1,15 @@
 package com.jgdev.viewbiding.content
 
+import android.content.Context
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.google.android.material.snackbar.Snackbar
 import com.jgdev.viewbiding.R
 import com.jgdev.viewbiding.databinding.ActivityFormularyBinding
 
@@ -24,7 +28,7 @@ ActivityFormularyBinding.inflate(layoutInflater)
         }
 
         with(biding){
-//            btnEnviar.setOnClickListener {
+            btnEnviar.setOnClickListener {
 //                atualizar()
 //                awitchToggle()
                 showSnackBar(it)
@@ -58,5 +62,12 @@ ActivityFormularyBinding.inflate(layoutInflater)
       val chek =   biding.chekedTerm.isChecked
         val resultado = if (chek) "SIm" else "Não"
         biding.textResult.text = "O CHEKEDE ESTÀ $resultado"
+    }
+    private fun cheked(){
+
+        biding.chekedTerm.setOnCheckedChangeListener { compoundButton, isCheked ->
+            val resultado = if (isCheked) "SIm" else "Não"
+            biding.textResult.text = "O CHEKEDE ESTÀ $resultado"
+        }
     }
 }
