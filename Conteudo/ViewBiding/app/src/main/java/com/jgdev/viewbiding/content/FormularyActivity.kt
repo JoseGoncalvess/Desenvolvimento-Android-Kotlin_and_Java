@@ -15,7 +15,7 @@ import com.jgdev.viewbiding.databinding.ActivityFormularyBinding
 
 class FormularyActivity : AppCompatActivity() {
     private  val   biding by lazy {
-ActivityFormularyBinding.inflate(layoutInflater)
+        ActivityFormularyBinding.inflate(layoutInflater)
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -59,7 +59,7 @@ ActivityFormularyBinding.inflate(layoutInflater)
     }
 
     private fun atualizar() {
-      val chek =   biding.chekedTerm.isChecked
+        val chek =   biding.chekedTerm.isChecked
         val resultado = if (chek) "SIm" else "Não"
         biding.textResult.text = "O CHEKEDE ESTÀ $resultado"
     }
