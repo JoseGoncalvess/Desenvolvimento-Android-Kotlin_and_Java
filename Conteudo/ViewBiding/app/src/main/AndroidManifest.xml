@@ -13,7 +13,7 @@
         android:theme="@style/Theme.ViewBiding"
         tools:targetApi="31">
         <activity
-            android:name=".content.FormularyActivity"
+            android:name=".content.LinearLayoutActivity"
             android:exported="false" />
         <activity
             android:name=".content.FloatingActionButtonActivity"
@@ -25,7 +25,7 @@
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".content.LinearLayoutActivity"
+            android:name=".content.FormularyActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

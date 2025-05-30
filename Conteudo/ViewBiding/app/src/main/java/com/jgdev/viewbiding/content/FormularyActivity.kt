@@ -1,6 +1,7 @@
 package com.jgdev.viewbiding.content
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -30,6 +31,13 @@ ActivityFormularyBinding.inflate(layoutInflater)
             chekedTerm.setOnCheckedChangeListener { compoundButton, isCheked ->
                 val resultado = if (isCheked) "SIm" else "Não"
                 biding.textResult.text = "O CHEKEDE ESTÀ $resultado"
+            }
+
+           val rgIdade =  rgIdade.checkedRadioButtonId
+            textResult.text = when(rgIdade){
+                R.id.rbIdade -> "15"
+                R.id.rbIdade2 -> "25"
+                else -> "NADA SELECIOANDO"
             }
         }
     }
